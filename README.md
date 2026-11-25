@@ -1,76 +1,46 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-FaESAkA)
-# JavaScript Challenge
+# JavaScript Challenge — Portfólio Interativo
 
-Upgrade your personal website with Tailwind CSS, dark mode, a sidebar, and dynamic project cards.
+Projeto desenvolvido durante o processo de trainee da **PotiCode** (2026), com foco na manipulação dinâmica do DOM, modularização em JavaScript e estilização responsiva.
 
-## How this scaffold was created
+## Demonstração
 
-```bash
-npm create vite@latest . --template vanilla
-npm install -D tailwindcss @tailwindcss/vite
-```
+https://github.com/arturmedeiros092/javascript-challenge/assets/demo/demo.mp4
 
-## Getting started
+> *(Dica: se preferir exibir um GIF ou imagem estática diretamente no GitHub, você também pode referenciar `./assets/project1.png` aqui.)*
 
-```bash
-npm install
-npm run dev
-```
+## Funcionalidades
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+- **Alternância de Tema (Dark / Light Mode):** troca dinâmica entre modo claro e escuro com atualização visual de ícones e logotipo (`darkMode.js`).
+- **Renderização Dinâmica de Projetos:** geração automática dos cards de projetos na interface a partir de uma estrutura de dados separada (`projectsData.js` e `projects.js`).
+- **Menu Lateral Interativo (Sidebar):** controle de abertura, fechamento e navegação responsiva (`sidebar.js`).
+- **Layout Responsivo:** adaptação da interface para diferentes tamanhos de tela utilizando CSS moderno.
 
----
+## Tecnologias Utilizadas
 
-## Tasks
+- **HTML5** — Estrutura semântica da aplicação
+- **CSS3** — Estilização, temas e responsividade
+- **JavaScript (ES6+)** — Lógica de interface, eventos e renderização dinâmica
+- **Vite** — Ambiente de desenvolvimento e empacotamento (*bundler*)
 
-### 1. Migrate your old website to Tailwind
+## Estrutura do Projeto
 
-- Copy your old HTML into the `<body>` of `index.html` — the sections `#hero`, `#projects`, and `#contact` are already there as placeholders
-- Remove your old `<link>` to external stylesheets — `css/style.css` is already linked
-- Replace your CSS classes with equivalent Tailwind utility classes
-- Reference: [Tailwind CSS docs](https://tailwindcss.com/docs)
-
-### 2. Replace hardcoded colors with Tailwind classes
-
-- Instead of writing `color: #111827` or `background: white`, use Tailwind classes like `text-foreground`, `bg-background`, `text-primary`
-- These classes come from the CSS variables defined in `css/style.css` under `@theme`
-- Adjust the default values in `@theme` to match your own color palette
-- For extra colors, add new `--color-*` variables inside `@theme`
-
-### 3. Dark mode toggle (`js/darkMode.js`)
-
-- Add a dark mode toggle button inside `<nav>` in `index.html`
-- In `js/darkMode.js`, select the button and add a `click` listener
-- On click, toggle the `dark` class on the root element:
-  ```js
-  document.documentElement.classList.toggle('dark')
-  ```
-- Update the color values inside `.dark` in `css/style.css` to set your dark palette
-
-### 4. Sidebar toggle (`js/sidebar.js`)
-
-- Add a sidebar toggle button inside `<nav>` in `index.html`
-- In `js/sidebar.js`, select `#sidebar` and the button, then toggle a class to show/hide the sidebar on button click (e.g. `-translate-x-full`)
-- Use Tailwind's `transition` and `translate` utilities for smooth animation:
-  ```html
-  <aside class="fixed top-0 left-0 h-full w-64 transition-transform duration-300 -translate-x-full" id="sidebar">
-  ```
-
-### 5. Dynamic Projects section (`js/projects.js` + `js/projectsData.js`)
-
-- Open `js/projectsData.js` and fill in the `projects` array with your projects:
-  ```js
-  export const projects = [
-    { title: 'My Project', description: 'What it does.', url: 'https://...' },
-  ]
-  ```
-- In `js/projects.js`, loop over the array and render a card for each project into `#projects`:
-  ```js
-  const container = document.querySelector('#projects')
-  projects.forEach(({ title, description, url }) => {
-    const card = document.createElement('div')
-    card.className = 'flex flex-col bg-background'
-    card.innerHTML = `<h3>${title}</h3><p>${description}</p><a href="${url}">View</a>`
-    container.appendChild(card)
-  })
-  ```
+```text
+javascript-challenge/
+├── assets/
+│   ├── demo/
+│   │   └── demo.mp4
+│   ├── darkThemeLogo.png
+│   ├── perfil.png
+│   ├── project1.png
+│   ├── project2.png
+│   └── project3.png
+├── css/
+│   └── style.css
+├── js/
+│   ├── darkMode.js
+│   ├── projects.js
+│   ├── projectsData.js
+│   └── sidebar.js
+├── index.html
+├── package.json
+└── vite.config.js
