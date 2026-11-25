@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html id="home" class="scroll-smooth" lang="en">
+
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,80₀;1,9₀₀&family=Roboto:ital,wght@₀,₁₀₀..9₀₀;1,₁₀₀..9₀₀&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/perfil.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artur Medeiros</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-black dark:bg-neutral-200 m-0 p-0 w-full h-full overflow-x-hidden">
+  <nav
+    class="bg-black dark:bg-neutral-200 fixed box-border top-0 left-0 w-full flex justify-between items-center px-11 z-10 border-b border-gray-500 dark:border-gray-900">
+    <h2
+      class="text-gray-400 dark:text-gray-800 text-2xl my-7 transition-colors duration-300 hover:text-purple-400 dark:hover:text-purple-700">
+      <a href="#home">Artur
+        Medeiros</a>
+    </h2>
+    <ul class="flex gap-12 md:gap-16 list-none m-0 p-0 items-center">
+      <li class="hidden sm:block"><button id="darkButton" class="cursor-pointer no-underline ">
+          <svg id="icon-sun" class="w-6 h-6 block text-gray-400 dark:text-gray-800" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg id="icon-moon" class="w-6 h-6 hidden text-gray-400 dark:text-gray-800" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 118.646 3.646a9.003 9.003 0 0011.708 11.708z"></path>
+          </svg>
+        </button></li>
+      <li class="hidden sm:block"><a class="cursor-pointer px-13 no-underline text-gray-400 dark:text-gray-800 dark:hover:text-purple-700 font-bold text-xl relative  hover:text-purple-400
+        trasition-colors duration-300" href="#projects">Projects</a></li>
+      <li class="hidden sm:block"><a class="cursor-pointer no-underline text-gray-400 dark:text-gray-800 dark:hover:text-purple-700 font-bold text-xl relative  hover:text-purple-400
+        trasition-colors duration-300" href="#contact">Contact</a></li>
+      <li class="block sm:hidden">
+        <button id="menu-button" class="text-gray-400 dark:text-gray-800 cursor-pointer focus:outline-none">
+          <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <aside
+    class="fixed px-8 justify-evenly bg-purple-800 dark:bg-purple-400 gap-16 top-20 left-0 w-full py-8 hidden mb-4 z-40 lg:hidden md:hidden"
+    id="sidebar">
+    <ul class="flex flex-row items-center justify-center gap-8 list-none m-0 ">
+      <li><button id="darkButtonAside" class="cursor-pointer no-underline ">
+          <svg id="icon-sun" class="w-6 h-6 block text-gray-400 dark:text-gray-800" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg id="icon-moon" class="w-6 h-6 hidden text-gray-400 dark:text-gray-800" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 118.646 3.646a9.003 9.003 0 0011.708 11.708z"></path>
+          </svg>
+        </button></li>
+      <li><a href="#projects"
+          class="text-gray-400 dark:text-gray-800 hover:text-purple-400 dark:hover:text-purple-700">Projects</a></li>
+      <li><a href="#contact"
+          class="text-gray-400 dark:text-gray-800 hover:text-purple-400 dark:hover:text-purple-700">Contact</a></li>
+    </ul>
+
+  </aside>
+
+  <main>
+    <section class="bg-black dark:bg-neutral-200
+       flex flex-col items-center w-full box-border py-18  px-8 gap-4 mt-20" id="hero">
+      <img class="rounded-full w-50 h-50 " src="assets/perfil.png">
+
+      <a href="#home">
+        <h1 class="text-white dark:text-black my-9 text-6xl">Artur Medeiros</h1>
+      </a>
+
+      <p class="m-0 text-gray-300 dark:text-gray-800 text-2xl">INFORMATION TECHNOLOGY STUDENT</p>
+
+      <a href="#projects"><button class="bg-purple-400 dark:bg-purple-800 text-base font-bold text-black dark:text-white   py-4 px-8 rounded hover:bg-black hover:text-purple-400
+          active:bg-purple-400 active:text-white transition-colors duration-300" onclick="">View
+          Projects</button></a>
+    </section>
+
+    <section class="flex flex-col items-center w-full box-border py-16 px-8 gap-12 border-t border-gray-700"
+      id="projects">
+      <h2 class="text-purple-400 dark:text-purple-700 text-4xl mt-20 mb-8 align-center">Projects</h2>
+
+      <div id="projects-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full box-border max-w-7xl 
+      mx-0 my-auto px-8 py-4">
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col items-center w-full box-border px-8 py-8 gap-4 border-b border-t border-gray-500 dark:border-gray-900"
+      id="contact">
+      <h2 class="text-purple-400 dark:text-purple-700 text-4xl mt-20 align-center">Contact</h2>
+
+      <div class="flex flex-row items-center gap-8 text-gray-400 text-2xl m-0
+       transition-colors duration-300">
+        <p class="text-gray-400 dark:text-gray-800 no-underline hover:text-purple-400 dark:hover:text-purple-600"><a
+            href="mailto:arturmcmd@gmail.com" target="_blank">Email</a></p>
+        <p class="text-gray-400 dark:text-gray-800 no-underline hover:text-purple-400 dark:hover:text-purple-600"><a
+            href="https://github.com/arturmedeiros092" target="_blank">GitHub</a></p>
+        <p class="text-gray-400 dark:text-gray-800 no-underline hover:text-purple-400 dark:hover:text-purple-600"><a
+            href="https://www.linkedin.com/in/artur-medeiros-cunha-dantas-151403411/" target="_blank">LinkedIn</a>
+        </p>
+        <p class="text-gray-400 dark:text-gray-800 no-underline hover:text-purple-400 dark:hover:text-purple-600"><a
+            href="https://www.instagram.com/arturmcmd_/" target="_blank">Instagram</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class=" text-gray-400 dark:text-gray-800 text-center p-4 mt-8">
+    <p>&copy; 2026; Artur Medeiros Cunha Maciel Dantas</p>
+  </footer>
+
+  <script type="module" src="js/darkMode.js"></script>
+  <script type="module" src="js/sidebar.js"></script>
+  <script type="module" src="js/projects.js"></script>
+</body>
+
+</html>
